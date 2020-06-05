@@ -64,6 +64,23 @@ namespace Subscription_Records.Data
                 Balance = 0.01
             };
             modelBuilder.Entity<Subscription>().HasData(firstRecord);
+
+            // Adding first record
+            Subscription secondRecord = new Subscription
+            {
+                SubscriptionId = 101,
+                SubscriptionDate = new DateTime(2010, 1, 01, 0, 0, 1, DateTimeKind.Local),
+                Service = "util",
+                Customer = "customer",
+                Account = 000011,
+                ServiceStartDate = new DateTime(2020, 5, 01, 0, 0, 1, DateTimeKind.Local),
+                ServiceEndDate = new DateTime(2020, 5, 31, 0, 0, 1, DateTimeKind.Local),
+                BillingDate = new DateTime(2020, 6, 01, 0, 0, 1, DateTimeKind.Local),
+                PaymentDate = new DateTime(2020, 6, 14, 0, 0, 1, DateTimeKind.Local),
+                PaymentDueDate = new DateTime(2020, 6, 15, 0, 0, 1, DateTimeKind.Local),
+                Balance = 0.01
+            };
+            modelBuilder.Entity<Subscription>().HasData(secondRecord);
         }
     }
 }
